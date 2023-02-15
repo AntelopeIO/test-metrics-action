@@ -1,0 +1,15 @@
+{
+  "name": "xunit-test-metrics-action",
+  "version": "0.0.1",
+  "description": "Parse an xUnit-formatted *.xml file to upload a metrics.json file for further processing.",
+  "main": "metrics.js",
+  "repository": "https://github.com/AntelopeIO/xunit-test-metrics-action",
+  "homepage": "https://github.com/AntelopeIO/xunit-test-metrics-action",
+  "author": {
+    "name": "AntelopeIO Automation",
+    "email": "zach.butler+xunit-test-metrics-action@eosnetwork.com",
+    "url": "https://antelope.io"
+  },
+  "license": "MIT",
+  "private": true
+}
