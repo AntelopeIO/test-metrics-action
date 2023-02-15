@@ -1,5 +1,5 @@
 # xUnit Test Metrics Action CI
-This GitHub Actions workflow initialize, lint, and test the `xunit-test-metrics-action` GitHub Action nodeJS project and source code.
+This GitHub Actions workflow initializes, lints, and tests the `xunit-test-metrics-action` GitHub Action nodeJS project and source code.
 
 ### Index
 1. [Triggers](#triggers)
