@@ -1,0 +1,37 @@
+name: xunit-test-metrics-action CI
+
+on: [push, workflow_dispatch]
+
+jobs:
+  documentation:
+    name: Attach Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+          submodules: 'false'
+
+      - name: Attach Documentation
+        run: cat .github/workflows/README.md >> $GITHUB_STEP_SUMMARY
+
+  nodeJS:
+    name: nodeJS Build and Test
+    runs-on: node18
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+
+      - name: Initialize Project
+        run: yarn
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Test
+        run: yarn test
