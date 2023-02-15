@@ -1,0 +1,13 @@
+name: Parse xUnit Test Metrics
+author: AntelopeIO Automation <zach.butler+xunit-test-metrics-action@eosnetwork.com>
+description: Parse an xUnit-formatted *.xml file to upload a metrics.json file for further processing.
+branding:
+  icon: bar-chart-2
+  color: green
+inputs:
+  xunit_xml_files:
+    description: Array containing "{job, path}" string pairs identifying the job step to pull metrics from, and the filename or path of the file.
+    required: true
+runs:
+  using: node18
+  main: metrics.js
