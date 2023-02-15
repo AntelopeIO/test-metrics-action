@@ -16,6 +16,9 @@
     "lint": "eslint .",
     "test": "jest --coverage"
   },
+  "files": [
+    "metrics.js"
+  ],
   "devDependencies": {
     "eslint": "^8.34.0",
     "eslint-config-airbnb-base": "^15.0.0",
