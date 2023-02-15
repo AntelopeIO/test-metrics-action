@@ -21,7 +21,7 @@ This workflow performs the following steps on GitHub runners:
 1. Attach Documentation
     1. Checkout the repo with no submodules.
     1. Attach an annotation to the GitHub Actions build summary page containing CI documentation.
-1. nodeJS Build and Test
+1. nodeJS Build and Test - matrix build testing on a variety of nodeJS versions
     1. Checkout the repo.
     1. Initialize the nodeJS project using `yarn`.
     1. Lint the project using `eslint` with `yarn lint`.

@@ -17,8 +17,13 @@ jobs:
         run: cat .github/workflows/README.md >> $GITHUB_STEP_SUMMARY
 
   nodeJS:
-    name: nodeJS Build and Test
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [6, 8, 10, 12, 14, 16, 18]
+
+    name: Build and Test - nodeJS v${{ matrix.node-version }}
 
     steps:
       - name: Checkout Repo
@@ -27,10 +32,10 @@ jobs:
           fetch-depth: 0
           submodules: 'recursive'
 
-      - name: Setup nodeJS 18
+      - name: Setup nodeJS v${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: ${{ matrix.node-version }}
 
       - name: Initialize Project
         run: yarn
